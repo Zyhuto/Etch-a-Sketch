@@ -29,3 +29,12 @@ function changeSize () {
 const changeSizeButton = document.querySelector(".size-button");
 
 changeSizeButton.addEventListener("click", e => changeSize());
+squareContainer.addEventListener("mouseover", e => changeColor(e.target))
+
+function changeColor (target) {
+    if (target.classList.contains("square-container")) {
+        return;}
+
+        target.style.background = "black";
+
+}
