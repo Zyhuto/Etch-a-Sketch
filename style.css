@@ -10,12 +10,17 @@ body {
    justify-content: center; 
    align-items: center;
    gap: 40px;
+   padding-top: 40px;
 }
 .square-container {
     --side-length: 50;
     --element-side-length-px: 15px;
-    height: calc(var(--side-length) * var(--element-side-length-px) + 2px);
-    width: calc(var(--side-length) * var(--element-side-length-px) + 2px);
+    --side-length-px: 802px;
+    /* height: calc(var(--side-length) * var(--element-side-length-px) + 2px); */
+    /* width: calc(var(--side-length) * var(--element-side-length-px) + 2px); */
+    height: var(--side-length-px);
+    width: var(--side-length-px);
+
     border: 1px solid black;
     display: flex;
     flex-flow: row wrap;
@@ -25,8 +30,11 @@ body {
 }
 
 .square {
-    height: var(--element-side-length-px);  
-    width: var(--element-side-length-px);  
-    border: 1px solid lightgray;
+   /*  height: var(--element-side-length-px);  
+    width: var(--element-side-length-px); */  
+    /* border: 1px solid lightgray; */
+    height: calc((var(--side-length-px) - 2px)/var(--side-length));
+    width: calc((var(--side-length-px) - 2px)/var(--side-length));
+
 
 }

@@ -14,8 +14,8 @@ function createChildElement () {
 
 
 function changeSize () {
-    let  newSize = +prompt("enter new Size Between 1-100");
-    if (!Number.isInteger(newSize) || !(newSize > 0) || newSize > 100){
+    let  newSize = +prompt("enter new Size From 1 to 100");
+    if (!Number.isInteger(newSize) || !(newSize > 0) || newSize > 1000){
         alert("wrong Input")
         return changeSize();}
     squareContainer.innerHTML = "";
