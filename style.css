@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+   gap: 40px;
+}
+.square-container {
+    --side-length: 50;
+    --element-side-length-px: 15px;
+    height: calc(var(--side-length) * var(--element-side-length-px) + 2px);
+    width: calc(var(--side-length) * var(--element-side-length-px) + 2px);
+    border: 1px solid black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.square {
+    height: var(--element-side-length-px);  
+    width: var(--element-side-length-px);  
+    border: 1px solid lightgray;
+
+}
