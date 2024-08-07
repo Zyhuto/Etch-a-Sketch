@@ -31,10 +31,16 @@ const changeSizeButton = document.querySelector(".size-button");
 changeSizeButton.addEventListener("click", e => changeSize());
 squareContainer.addEventListener("mouseover", e => changeColor(e.target))
 
+function getRandomRGBColor (){
+    return `rgb(${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)},${Math.floor(Math.random() * 256)})`
+}
+
 function changeColor (target) {
     if (target.classList.contains("square-container")) {
         return;}
 
-        target.style.background = "black";
+        target.style.background = getRandomRGBColor();
 
 }
+
+createChildElement();
